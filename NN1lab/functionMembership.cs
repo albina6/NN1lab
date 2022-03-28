@@ -10,11 +10,12 @@ namespace NN1lab
                             //нужно 4 подкласса
     {
         private string nameAlt;
-        private double Y;
-        private FunctionMembership fun;
+        public double Y;
+        //private FunctionMembership fun;
 
         public virtual double GetY(double x)
         {
+           // fun.GetY(x);
             return 0.0;
         }
         public FunctionMembership()
@@ -23,8 +24,8 @@ namespace NN1lab
         }
         public FunctionMembership(string nameAlt,double a,double b, double c)
         {
-            this.nameAlt = nameAlt;
-            TriangleFunc triangle = new TriangleFunc(a, b, c);
+           // this.nameAlt = nameAlt;
+            //TriangleFunc fun = new TriangleFunc(nameAlt, a, b, c);
            // Y=triangle.GetY
             
         }

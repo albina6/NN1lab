@@ -10,7 +10,7 @@ namespace NN1lab
     {
         private double a,b,c;
 
-        public TriangleFunc(double a, double b, double c)
+        public TriangleFunc(string nameAlt,double a, double b, double c):base (nameAlt)
         {
             this.a = a;
             this.b = b;

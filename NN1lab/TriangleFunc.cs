@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace NN1lab
 {
-    class triangleFunction : functionMembership
+    class TriangleFunc : FunctionMembership
     {
-        private int a,b,c;
+        private double a,b,c;
 
-        public triangleFunction(int a,int b,int c)
+        public TriangleFunc(double a, double b, double c)
         {
             this.a = a;
             this.b = b;
             this.c = c;
         }
-        public double triangeY(double x)
+        public override double GetY(double x)
         {
-            double y = 0.0;
+            double y;
             if (a <= x && x <= b)
             {
                 y = 1 - ((b - x) / (b - a));
@@ -28,8 +28,26 @@ namespace NN1lab
                 y = 1 - ((x - c) / (c - b));
             }
             else
-                y = 0;
+                y = 0.0;
             return y;
+        }
+
+        public double A
+        {
+            get => a;
+            set => a = value;
+        }
+
+        public double B
+        {
+            get => b;
+            set => b = value;
+        }
+
+        public double C
+        {
+            get => c;
+            set => c = value;
         }
     }
 }

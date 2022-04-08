@@ -16,7 +16,7 @@ namespace NN1lab
         public virtual double GetY(double x)
         {
            // fun.GetY(x);
-            return 0.0;
+            return 100.0;
         }
         public FunctionMembership()
         {

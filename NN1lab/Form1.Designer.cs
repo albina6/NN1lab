@@ -34,8 +34,9 @@
             this.сохранитьКакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lawsB = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.addCriterionB = new System.Windows.Forms.Button();
+            this.criterionPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             this.файлToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(936, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(937, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -79,7 +80,7 @@
             // 
             // lawsB
             // 
-            this.lawsB.Location = new System.Drawing.Point(39, 458);
+            this.lawsB.Location = new System.Drawing.Point(572, 491);
             this.lawsB.Name = "lawsB";
             this.lawsB.Size = new System.Drawing.Size(165, 42);
             this.lawsB.TabIndex = 3;
@@ -87,28 +88,44 @@
             this.lawsB.UseVisualStyleBackColor = true;
             this.lawsB.Click += new System.EventHandler(this.lawsB_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(39, 48);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(485, 375);
-            this.panel1.TabIndex = 4;
-            // 
             // panel2
             // 
             this.panel2.AccessibleName = "";
-            this.panel2.Location = new System.Drawing.Point(573, 48);
+            this.panel2.Location = new System.Drawing.Point(572, 50);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(322, 375);
+            this.panel2.Size = new System.Drawing.Size(325, 357);
             this.panel2.TabIndex = 5;
+            // 
+            // addCriterionB
+            // 
+            this.addCriterionB.Location = new System.Drawing.Point(572, 440);
+            this.addCriterionB.Margin = new System.Windows.Forms.Padding(0);
+            this.addCriterionB.Name = "addCriterionB";
+            this.addCriterionB.Size = new System.Drawing.Size(165, 39);
+            this.addCriterionB.TabIndex = 6;
+            this.addCriterionB.Text = "Добавить критерий";
+            this.addCriterionB.UseVisualStyleBackColor = true;
+            this.addCriterionB.Click += new System.EventHandler(this.addCriterionB_Click);
+            // 
+            // criterionPanel
+            // 
+            this.criterionPanel.AutoScroll = true;
+            this.criterionPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.criterionPanel.Location = new System.Drawing.Point(35, 50);
+            this.criterionPanel.Name = "criterionPanel";
+            this.criterionPanel.Size = new System.Drawing.Size(489, 357);
+            this.criterionPanel.TabIndex = 7;
+            this.criterionPanel.WrapContents = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 577);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(937, 545);
+            this.Controls.Add(this.criterionPanel);
+            this.Controls.Add(this.addCriterionB);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lawsB);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -129,8 +146,9 @@
         private System.Windows.Forms.ToolStripMenuItem сохранитьКакToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
         private System.Windows.Forms.Button lawsB;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button addCriterionB;
+        private System.Windows.Forms.FlowLayoutPanel criterionPanel;
     }
 }
 

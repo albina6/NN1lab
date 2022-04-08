@@ -25,7 +25,7 @@ namespace NN1lab
             }
             else if (b <= x && x <= c)
             {
-                y = 1 - ((x - c) / (c - b));
+                y = 1 - ((x - b) / (c - b));
             }
             else
                 y = 0.0;

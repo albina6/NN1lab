@@ -10,12 +10,13 @@ namespace NN1lab
     {
         private double a,b,c;
 
-        public TriangleFunc(string nameAlt,double a, double b, double c):base (nameAlt)
+        public TriangleFunc(string Name,double a, double b, double c):base (Name)
         {
             this.a = a;
             this.b = b;
             this.c = c;
         }
+
         public override double GetY(double x)
         {
             double y;

@@ -10,14 +10,14 @@ namespace NN1lab
     {
         private double a, b, c, d;
 
-        public TrapezeFunc(double a, double b, double c, double d)
+        public TrapezeFunc(string nameAlt, double a, double b, double c,double d) : base(nameAlt)
         {
             this.a = a;
             this.b = b;
             this.c = c;
             this.d = d;
         }
-        public double GetY(double x)
+        public override double GetY(double x)
         {
             double y;
             if (a <= x && x <= b)

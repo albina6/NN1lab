@@ -45,6 +45,7 @@
             // 
             // okButton
             // 
+            this.okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.okButton.Location = new System.Drawing.Point(626, 128);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);
@@ -91,7 +92,7 @@
             this.FuncCB.Name = "FuncCB";
             this.FuncCB.Size = new System.Drawing.Size(208, 21);
             this.FuncCB.TabIndex = 4;
-            this.FuncCB.SelectedIndexChanged += new System.EventHandler(this.FuncCB_SelectedIndexChanged);
+            this.FuncCB.SelectedIndexChanged += new System.EventHandler(this.FuncCB_SelectedIndexChanged_1);
             // 
             // aLable
             // 

@@ -34,9 +34,9 @@
             this.сохранитьКакToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lawsB = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.yPanel = new System.Windows.Forms.Panel();
             this.addCriterionB = new System.Windows.Forms.Button();
-            this.criterionPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.baseCritPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,13 +88,13 @@
             this.lawsB.UseVisualStyleBackColor = true;
             this.lawsB.Click += new System.EventHandler(this.lawsB_Click);
             // 
-            // panel2
+            // yPanel
             // 
-            this.panel2.AccessibleName = "";
-            this.panel2.Location = new System.Drawing.Point(572, 50);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(325, 357);
-            this.panel2.TabIndex = 5;
+            this.yPanel.AccessibleName = "";
+            this.yPanel.Location = new System.Drawing.Point(572, 50);
+            this.yPanel.Name = "yPanel";
+            this.yPanel.Size = new System.Drawing.Size(325, 357);
+            this.yPanel.TabIndex = 5;
             // 
             // addCriterionB
             // 
@@ -107,15 +107,15 @@
             this.addCriterionB.UseVisualStyleBackColor = true;
             this.addCriterionB.Click += new System.EventHandler(this.addCriterionB_Click);
             // 
-            // criterionPanel
+            // baseCritPanel
             // 
-            this.criterionPanel.AutoScroll = true;
-            this.criterionPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.criterionPanel.Location = new System.Drawing.Point(35, 50);
-            this.criterionPanel.Name = "criterionPanel";
-            this.criterionPanel.Size = new System.Drawing.Size(489, 357);
-            this.criterionPanel.TabIndex = 7;
-            this.criterionPanel.WrapContents = false;
+            this.baseCritPanel.AutoScroll = true;
+            this.baseCritPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.baseCritPanel.Location = new System.Drawing.Point(35, 50);
+            this.baseCritPanel.Name = "baseCritPanel";
+            this.baseCritPanel.Size = new System.Drawing.Size(489, 357);
+            this.baseCritPanel.TabIndex = 7;
+            this.baseCritPanel.WrapContents = false;
             // 
             // Form1
             // 
@@ -123,9 +123,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(937, 545);
-            this.Controls.Add(this.criterionPanel);
+            this.Controls.Add(this.baseCritPanel);
             this.Controls.Add(this.addCriterionB);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.yPanel);
             this.Controls.Add(this.lawsB);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -146,9 +146,9 @@
         private System.Windows.Forms.ToolStripMenuItem сохранитьКакToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
         private System.Windows.Forms.Button lawsB;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel yPanel;
         private System.Windows.Forms.Button addCriterionB;
-        private System.Windows.Forms.FlowLayoutPanel criterionPanel;
+        private System.Windows.Forms.FlowLayoutPanel baseCritPanel;
     }
 }
 

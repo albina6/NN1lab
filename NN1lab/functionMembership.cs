@@ -6,25 +6,27 @@ using System.Threading.Tasks;
 
 namespace NN1lab
 {
-    class FunctionMembership//функция принадлежности,
+    public class FunctionMembership//функция принадлежности,
                             //нужно 4 подкласса
     {
-        private string nameAlt;
-        public double Y;
+       // private string nameAlt;
+        private double Y;
         //private FunctionMembership fun;
-
+        public string Name { get; set; }
+        
         public virtual double GetY(double x)
         {
            // fun.GetY(x);
             return 100.0;
         }
+        
         public FunctionMembership()
         {
 
         }
         public FunctionMembership(string nameAlt,double a,double b, double c)
         {
-           // this.nameAlt = nameAlt;
+           //this.nameAlt = nameAlt;
             //TriangleFunc fun = new TriangleFunc(nameAlt, a, b, c);
            // Y=triangle.GetY
             

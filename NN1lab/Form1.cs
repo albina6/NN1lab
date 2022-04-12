@@ -14,12 +14,14 @@ namespace NN1lab
 {
     public partial class Form1 : Form
     {
-        //private List<GroupBox> listCriterionGB;
+        //private List<CriterionForm> critFormList;
+        private List<Criterion> criterionList;
         private int countCrit = 1;
 
         public Form1()
         {
             InitializeComponent();
+            criterionList = new List<Criterion>();
         }
         
 
@@ -45,53 +47,79 @@ namespace NN1lab
 
         private void addCriterionB_Click(object sender, EventArgs e)
         {
-            GroupBox groupBox= new GroupBox();
+            FlowLayoutPanel critPanel= new FlowLayoutPanel();
+            critPanel.FlowDirection = FlowDirection.LeftToRight;
             //groupBox.Dock = DockStyle.Left;
-            groupBox.Margin = new Padding(5);
+            critPanel.Margin = new Padding(5);
             //groupBox.Location = new Point(50, addB.Location.Y);
-            groupBox.Height = 250;
-            groupBox.Width = criterionPanel.Width-30;
-            groupBox.Visible = true;
-            groupBox.Text = Convert.ToString(countCrit) + " критерий";
+            critPanel.Height = 270;
+            critPanel.Width = baseCritPanel.Width-30;
+            critPanel.Visible = true;
+            //critPanel.Text = Convert.ToString(countCrit) + " критерий";
+            //countCrit++;
+            
            // addB.Location =new Point(130, groupBox.Bottom );
-            criterionPanel.Controls.Add(groupBox);
+            baseCritPanel.Controls.Add(critPanel);
+            Criterion criterion = new Criterion();
+           // criterionList.Add(criterion);
             ////listCriterionGB.Add(groupBox);
-            criterionGroup(groupBox);
+            criterionGroup(critPanel);
+            
         }
-
-        private void criterionGroup(GroupBox groupBox)
+       // private void loc
+       private void initAltClick(object sender, EventArgs e)
         {
-            GroupBox infoCrit = new GroupBox();
-
-            Label nameCritL = new Label();
-            nameCritL.Text = "Введите название критерия";
+            Button button = sender as Button;
+            Control controlParent = button.Parent;
+            controlParent.BackColor = Color.Green;
+           // string nameCrit= controlParent.
+            //var index = baseCritPanel.Controls.IndexOf(sender as Control);
             
-            //nameCritL.Font = new Font("Calibri", 10);
-
-            TextBox nameCritTB = new TextBox();
-
-            Label countAltL = new Label();
-            countAltL.Text = "Введите колличество альтернатив";
-            NumericUpDown countAlt = new NumericUpDown();
-            countAlt.Minimum = 2;
 
 
-
-
-
-
-            infoCrit.Controls.Add(nameCritL);
-            infoCrit.Controls.Add(nameCritTB);
-            infoCrit.Controls.Add(countAltL);
-            infoCrit.Controls.Add(countAlt);
-
-            infoCrit.Dock = DockStyle.Left;
-            infoCrit.Visible = true;
-            PictureBox pictureBox = new PictureBox();
-            //pictureBox_Paint();
-
-            groupBox.Controls.Add(infoCrit);
             
+        }
+        private void criterionGroup(FlowLayoutPanel critPanel)
+        {
+            CriterionForm infoCrit = new CriterionForm();
+            Criterion crit= new Criterion()
+            criterionList.Add(infoCrit.GetCriterion());
+            /*//FlowLayoutPanel infoCrit = new FlowLayoutPanel();
+            //Label nameCritL = new Label();
+            //nameCritL.Text = "Введите название критерия";
+            //TextBox nameCritTB = new TextBox();
+            //Label countAltL = new Label();
+            //countAltL.Text = "Введите колличество альтернатив";
+            //countAltL.AutoSize = true;
+            //NumericUpDown countAlt = new NumericUpDown();
+            //countAlt.Minimum = 2;
+            //Button initAltB = new Button();
+            //initAltB.Text = "Задать альтернативы";
+            //initAltB.AutoSize = true;
+            //initAltB.Click += new EventHandler(initAltClick);
+
+
+
+
+
+
+            //infoCrit.Controls.Add(nameCritL);
+            //infoCrit.Controls.Add(nameCritTB);
+            //infoCrit.Controls.Add(countAltL);
+            //infoCrit.Controls.Add(countAlt);
+            //infoCrit.Controls.Add(initAltB);
+
+            //infoCrit.FlowDirection = FlowDirection.TopDown;
+            //infoCrit.WrapContents = false;
+            //infoCrit.AutoSize = true;
+            ////infoCrit.AutoScroll = true;
+            ////infoCrit.Dock = DockStyle.Left;
+            //infoCrit.Padding = new Padding(5);
+            //PictureBox pictureBox = new PictureBox();
+            ////pictureBox_Paint();*/
+
+            critPanel.Controls.Add(infoCrit);
+            //string name = infoCrit.nameCritTB.Text;
 
         }
 
@@ -105,6 +133,10 @@ namespace NN1lab
             Chart chart = new Chart();
 
         }
-        
+
+        private void PaintGraf(Panel panel, Criterion criterion)
+        {
+
+        }
     }
 }
